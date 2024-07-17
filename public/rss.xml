@@ -4,7 +4,7 @@
         <title>Onboard Changelog</title>
         <link>https://changelog.onboard.xyz</link>
         <description>How Onboard gets better every week</description>
-        <lastBuildDate>Wed, 17 Jul 2024 17:19:39 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 17 Jul 2024 17:24:46 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Onboard changelog</generator>
         <image>
@@ -14,11 +14,18 @@
         </image>
         <copyright>All rights reserved 2024, Onboard Global</copyright>
         <item>
+            <title><![CDATA[More Ways to Fund Your Card!]]></title>
+            <link>https://changelog.onboard.xyz/changelogs/card-funding-updates</link>
+            <guid>https://changelog.onboard.xyz/changelogs/card-funding-updates</guid>
+            <pubDate>Fri, 05 Jul 2024 09:25:32 GMT</pubDate>
+            <enclosure url="https://i.ibb.co/J3x76Gj/chanagelog-banners-04.png" length="0" type="image/png"/>
+        </item>
+        <item>
             <title><![CDATA[Say Hello to Multiple USD Cards]]></title>
             <link>https://changelog.onboard.xyz/changelogs/multiple-usd-cards</link>
             <guid>https://changelog.onboard.xyz/changelogs/multiple-usd-cards</guid>
             <pubDate>Fri, 07 Jun 2024 09:25:32 GMT</pubDate>
-            <enclosure url="https://i.ibb.co/PTw1K2G/chanagelog-banners-03.png" length="0" type="image/png"/>
+            <enclosure url="https://i.ibb.co/WDgBZrv/chanagelog-banners-03.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Introducing The New and Improved Onboard Wallet]]></title>

@@ -180,11 +180,11 @@ function Navbar(props: NavbarProps) {
               setShowLogoMenu(!showLogoMenu);
             }}
           >
-            <Link href="https://june.so/" passHref prefetch={false}>
+            <Link href="https://onboard.xyz/" passHref prefetch={false}>
               <NextResponsiveImage
                 display={["none", "none", "block"]}
-                src="/june-3.0-logo.svg"
-                alt="June's logo"
+                src="/onboard-logo.svg"
+                alt="Onboard's logo"
                 width={["100px"]}
                 height={["32px"]}
                 cursor="pointer"
