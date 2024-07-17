@@ -34,7 +34,7 @@ export const MainLayout = ({
 }: MainLayoutProps) => {
   const metaTitle = `${
     infiniteScrollingView ? "" : page > 0 ? `Page ${page} -` : ""
-  } June Changelog`;
+  } Onboard Changelog`;
   const timeline = useTimelineStore();
   const { animatePage, setAnimatePage } = useAnimatePageStore();
   const router = useRouter();
@@ -90,29 +90,29 @@ export const MainLayout = ({
           <title>{metaTitle}</title>
           <link rel="icon" href="/favicon.ico" />
           <meta name="title" content={metaTitle} />
-          <meta name="description" content="Discover new updates and improvements to June." />
-          <meta name="image" content="https://changelog.june.so/social.png" />
+          <meta name="description" content="Discover new features, improvements and bug fixes on Onboard." />
+          <meta name="image" content="https://changelog.onboard.xyz/social.png" />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://changelog.june.so" />
+          <meta property="og:url" content="https://changelog.onboard.xyz" />
           <meta property="og:title" content={metaTitle} />
           <meta
             property="og:description"
-            content="Discover new updates and improvements to June."
+            content="Discover new features, improvements and bug fixes on Onboard."
           />
-          <meta property="og:image" content="https://changelog.june.so/social.png" />
+          <meta property="og:image" content="https://changelog.onboard.xyz/social.png" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:url" content="https://changelog.june.so" />
+          <meta name="twitter:url" content="https://changelog.onboard.xyz" />
           <meta name="twitter:title" content={metaTitle} />
           <meta
             name="twitter:description"
-            content="Discover new updates and improvements to June."
+            content="Discover new features, improvements and bug fixes on Onboard."
           />
-          <meta name="twitter:image" content="https://changelog.june.so/social.png" />
+          <meta name="twitter:image" content="https://changelog.onboard.xyz/social.png" />
           <link
             rel="alternate"
             type="application/rss+xml"
-            title="June Changelog"
-            href="https://changelog.june.so/rss.xml"
+            title="Onboard Changelog"
+            href="https://changelog.onboard.xyz/rss.xml"
           />
         </Head>
       )}
@@ -170,7 +170,7 @@ export const MainLayout = ({
                   {!isInBlogPage && (
                     <VStack alignItems="start" width="100%">
                       <Text fontSize="xl" color="gray.700" textAlign={"start"}>
-                        The latest from June
+                        New features, improvements and bugs squashed on Onboard
                       </Text>
                       <Heading as="h1" fontSize={["5xl"]} color="black" textAlign={"start"}>
                         Changelog

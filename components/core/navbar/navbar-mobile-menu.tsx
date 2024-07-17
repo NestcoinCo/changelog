@@ -22,8 +22,8 @@ export const NavbarMobileMenu = ({ toggle }: NavbarMobileMenuProps) => (
     >
       <Flex direction="column">
         <Flex align="center" justify="space-between">
-          <Flex p={4} as="a" href="https://june.so/">
-            <NextImage height={48} width={48} src="/june-logo-symbol-only.svg" alt="june-logo" />
+          <Flex p={4} as="a" href="https://onboard.xyz/">
+            <NextImage height={48} width={48} src="/june-logo-symbol-only.svg" alt="onboard-logo" />
           </Flex>
           <Flex p={4} onClick={toggle}>
             <Box pr={1}>
@@ -46,31 +46,31 @@ export const NavbarMobileMenu = ({ toggle }: NavbarMobileMenuProps) => (
       overflowY="hidden"
     >
       <Flex width="100%" direction="column" h="40%" justify="space-between">
-        <Link prefetch={false} href="https://june.so/feature-launches" passHref>
+        <Link prefetch={false} href="https://onboard.xyz/wallet" passHref>
           <Flex align="center" style={{ textDecoration: "none" }}>
             <Text fontSize="4xl" fontWeight="bold" color={MOBILE_MENU_COLOR}>
-              Feature report
+              Wallet
             </Text>
           </Flex>
         </Link>
-        <Link prefetch={false} href="https://qualify.june.so/" passHref>
+        <Link prefetch={false} href="https://onboard.xyz/exchange" passHref>
           <Flex align="center" style={{ textDecoration: "none" }}>
             <Text fontSize="4xl" fontWeight="bold" color={MOBILE_MENU_COLOR}>
-              Qualification Bot
+              Exchange
             </Text>
           </Flex>
         </Link>
-        <Link prefetch={false} href="https://june.so/customer-stories" passHref>
+        <Link prefetch={false} href="https://onboard.xyz/direct" passHref>
           <Flex align="center" style={{ textDecoration: "none" }}>
             <Text fontSize="4xl" fontWeight="bold" color={MOBILE_MENU_COLOR}>
-              Customers
+              Direct
             </Text>
           </Flex>
         </Link>
         <Link prefetch={false} href="https://june.so/pricing" passHref>
           <Flex align="center" style={{ textDecoration: "none" }} _hover={{ cursor: "pointer" }}>
             <Text fontSize="4xl" fontWeight="bold" color={MOBILE_MENU_COLOR}>
-              Pricing
+              Builders
             </Text>
           </Flex>
         </Link>

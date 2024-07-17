@@ -19,9 +19,9 @@ function TryJuneBanner(props: TryJuneBannerProps) {
   const {
     heading = (
       <>
-        Set up June{" "}
+        Onboard{" "}
         <GradientHighlight {...(props.mode === "dark" && { variant: "lightest", glow: true })}>
-          in 2 minutes
+          the World
         </GradientHighlight>
       </>
     ),

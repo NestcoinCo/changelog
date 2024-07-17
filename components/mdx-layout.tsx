@@ -60,9 +60,9 @@ export interface MdxLayoutProps {
 }
 
 export const MdxLayout = (props: MdxLayoutProps) => {
-  const title = `${props.meta.title} | June Changelog`;
-  const description = "Discover new updates and improvements to June.";
-  const url = "https://changelog.june.so";
+  const title = `${props.meta.title} | Onboard Changelog`;
+  const description = "Discover new features, improvements and bug fixes on Onboard.";
+  const url = "https://changelog.onboard.xyz";
 
   const { setPrevUrl } = usePreviousPageUrl();
   const router = useRouter();
@@ -130,8 +130,8 @@ export const MdxLayout = (props: MdxLayoutProps) => {
           <link
             rel="alternate"
             type="application/rss+xml"
-            title="June Changelog"
-            href="https://changelog.june.so/rss.xml"
+            title="Onboard Changelog"
+            href="https://changelog.onboard.xyz/rss.xml"
           />
         </Head>
       )}

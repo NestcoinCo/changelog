@@ -5,23 +5,23 @@ import { Feed } from "feed";
 const MDX_DIR = "changelogs";
 
 export const generateRssFeed = async () => {
-  const siteURL = "https://changelog.june.so";
+  const siteURL = "https://changelog.onboard.xyz";
   const date = new Date();
   const author = {
-    name: "June",
-    link: "https://twitter.com/JuneDotSo",
+    name: "Onboard Protocol",
+    link: "https://twitter.com/OnboardGlobal",
   };
 
   const feed = new Feed({
-    title: "June Changelog",
-    description: "How June gets better every week",
+    title: "Onboard Changelog",
+    description: "How Onboard gets better every week",
     id: siteURL,
     link: siteURL,
     image: `${siteURL}/favicon.ico`,
     favicon: `${siteURL}/favicon.ico`,
-    copyright: `All rights reserved ${date.getFullYear()}, June`,
+    copyright: `All rights reserved ${date.getFullYear()}, Onboard Global`,
     updated: date, // today's date
-    generator: "Feed for June changelog",
+    generator: "Feed for Onboard changelog",
     feedLinks: {
       rss2: `${siteURL}/rss/feed.xml`, // xml format
       json: `${siteURL}/rss/feed.json`, // json fromat

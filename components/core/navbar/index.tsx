@@ -45,8 +45,7 @@ const wordmarkSvg = `<svg width="313" height="100" viewBox="0 0 313 100" fill="n
 `;
 
 const ROUTES = [
-  { href: "https://june.so/customer-stories", title: "Customers", type: "external-link" },
-  { href: "https://june.so/pricing", title: "Pricing", type: "external-link" },
+  { href: "https://onboard.xyz/ecosystem", title: "For Builders", type: "external-link" },
   { href: "/", title: "Changelog", type: "internal-link" },
 ] as const;
 
@@ -207,7 +206,7 @@ function Navbar(props: NavbarProps) {
                       color: "white",
                     })}
                   >
-                    Features
+                    Products
                   </Text>
                   <ChevronDownIcon
                     boxSize={[5]}
@@ -237,9 +236,9 @@ function Navbar(props: NavbarProps) {
                           color="landing.almostBlack.500"
                           _hover={{ color: "primary", cursor: "pointer" }}
                           as="a"
-                          href="https://june.so/"
+                          href="https://onboard.xyz/wallet"
                         >
-                          Product Analytics
+                          Wallet
                         </Text>
                         {isHome && <SelectedTick />}
                       </HStack>
@@ -249,10 +248,10 @@ function Navbar(props: NavbarProps) {
                             fontWeight="medium"
                             color="landing.almostBlack.500"
                             as="a"
-                            href="https://june.so/feature-launches"
+                            href="https://onboard.xyz/exchange"
                             _hover={{ color: "primary", cursor: "pointer" }}
                           >
-                            Feature Report
+                            Exchange
                           </Text>
                         </Flex>
                         {isFeatureLaunches && <SelectedTick />}
@@ -262,10 +261,10 @@ function Navbar(props: NavbarProps) {
                           fontWeight="medium"
                           color="landing.almostBlack.500"
                           as="a"
-                          href="https://qualify.june.so/"
+                          href="https://onboard.xyz/direct"
                           _hover={{ color: "primary", cursor: "pointer" }}
                         >
-                          Qualification Bot
+                          Direct
                         </Text>
                       </HStack>
                       <HStack w="200px" justify="space-between">
