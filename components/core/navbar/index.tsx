@@ -45,7 +45,6 @@ const wordmarkSvg = `<svg width="313" height="100" viewBox="0 0 313 100" fill="n
 `;
 
 const ROUTES = [
-  { href: "https://onboard.xyz/ecosystem", title: "For Builders", type: "external-link" },
   { href: "/", title: "Changelog", type: "internal-link" },
 ] as const;
 
@@ -97,12 +96,12 @@ function Navbar(props: NavbarProps) {
         >
           <Flex direction="column">
             <Flex align="center" justify="space-between">
-              <Flex p={4} as="a" href="https://june.so/">
+              <Flex p={4} as="a" href="https://changelog.onboard.xyz/">
                 <NextImage
                   height={48}
                   width={48}
-                  src="/june-logo-symbol-only.svg"
-                  alt="june-logo"
+                  src="/onboard-logo.svg"
+                  alt="onboard-logo"
                 />
               </Flex>
               <Flex p={4} onClick={onMobileMenuToggle}>
@@ -176,11 +175,11 @@ function Navbar(props: NavbarProps) {
           {/* Logo */}
           <Box
             onContextMenu={(e) => {
-              e.preventDefault();
-              setShowLogoMenu(!showLogoMenu);
+              // e.preventDefault();
+              // setShowLogoMenu(!showLogoMenu);
             }}
           >
-            <Link href="https://onboard.xyz/" passHref prefetch={false}>
+            <Link href="/" passHref prefetch={false}>
               <NextResponsiveImage
                 display={["none", "none", "block"]}
                 src="/onboard-logo.svg"
@@ -267,30 +266,102 @@ function Navbar(props: NavbarProps) {
                           Direct
                         </Text>
                       </HStack>
+                      <HStack>
+                        <Text
+                          fontWeight="medium"
+                          color="landing.almostBlack.500"
+                          as="a"
+                          href="https://onboard.xyz/cards"
+                          _hover={{ color: "primary", cursor: "pointer" }}
+                        >
+                          Cards
+                        </Text>
+                      </HStack>
+                      <HStack>
+                        <Text
+                          fontWeight="medium"
+                          color="landing.almostBlack.500"
+                          as="a"
+                          href="https://onboard.xyz/merchants"
+                          _hover={{ color: "primary", cursor: "pointer" }}
+                        >
+                          Merchants
+                        </Text>
+                      </HStack>
+                    </VStack>
+                  </Box>
+                </PopoverContent>
+              </Portal>
+            </Popover>
+            <Popover variant="responsive" trigger="hover">
+              <PopoverTrigger>
+                <HStack role="group" spacing={[1]}>
+                  <Text
+                    {...desktopNavItemStyle}
+                    {...(props.mode === "dark" && {
+                      color: "white",
+                    })}
+                  >
+                    For Builders
+                  </Text>
+                  <ChevronDownIcon
+                    boxSize={[5]}
+                    {...(props.mode === "dark" && {
+                      color: "white",
+                    })}
+                    _groupHover={{
+                      color: "primary",
+                    }}
+                  />
+                </HStack>
+              </PopoverTrigger>
+              <Portal>
+                <PopoverContent
+                  boxShadow="0px 2px 8px rgba(104, 104, 247, 0.1);"
+                  background="white"
+                  border="1px solid #F8F9FA"
+                  rounded="2xl"
+                  minWidth="unset"
+                  width="unset"
+                >
+                  <Box p={[6]}>
+                    <VStack alignItems="start" spacing={[6]}>
+                      <HStack w="200px" justify={"space-between"}>
+                        <Text
+                          fontWeight="medium"
+                          color="landing.almostBlack.500"
+                          _hover={{ color: "primary", cursor: "pointer" }}
+                          as="a"
+                          href="https://docs.onboard.xyz"
+                        >
+                          Developer Docs
+                        </Text>
+                        {isHome && <SelectedTick />}
+                      </HStack>
                       <HStack w="200px" justify="space-between">
                         <Flex gap={3}>
                           <Text
                             fontWeight="medium"
                             color="landing.almostBlack.500"
                             as="a"
-                            href="https://june.so/ai"
+                            href="https://docsend.com/view/uisj5s2t5iia2yvc"
                             _hover={{ color: "primary", cursor: "pointer" }}
                           >
-                            June AI
-                          </Text>
-                          <Text
-                            fontWeight="semibold"
-                            fontSize="xs"
-                            color="white"
-                            bgGradient={gradients["PRIMARY_LIGHTER"]}
-                            px={[1.5]}
-                            py={[1]}
-                            rounded="md"
-                          >
-                            New
+                            Whitepaper
                           </Text>
                         </Flex>
-                        {isAI && <SelectedTick />}
+                        {isFeatureLaunches && <SelectedTick />}
+                      </HStack>
+                      <HStack>
+                        <Text
+                          fontWeight="medium"
+                          color="landing.almostBlack.500"
+                          as="a"
+                          href="https://onchaindreamers.com"
+                          _hover={{ color: "primary", cursor: "pointer" }}
+                        >
+                          Onchain Dreamers
+                        </Text>
                       </HStack>
                     </VStack>
                   </Box>
@@ -309,49 +380,15 @@ function Navbar(props: NavbarProps) {
           </HStack>
           {/* CTAs */}
           <HStack spacing={4} align="center">
-            {loggedIn ? (
-              <Button
-                as="a"
-                size="landingMd"
-                variant="landingGradient"
-                href={process.env.JUNE_APP_HOST}
-              >
-                Dashboard
-              </Button>
-            ) : (
-              <>
-                <Button
-                  as="a"
-                  size="landingMd"
-                  variant="landingOutline"
-                  href={`${process.env.JUNE_APP_HOST}/login`}
-                  {...(props.mode === "dark" && {
-                    variant: "landingOutlineDark",
-                  })}
-                >
-                  Login
-                </Button>
-                <div>
-                  <Button
-                    className="g-conversion-button"
-                    as="a"
-                    size="landingMd"
-                    variant="landingGradient"
-                    href={`${process.env.JUNE_APP_HOST}/start`}
-                  >
-                    Sign up
-                  </Button>
-                  {/* Google one-tap */}
-                  <div
-                    id="g_id_onload"
-                    data-auto_prompt="true"
-                    data-client_id={process.env.GOOGLE_CLIENT_ID}
-                    data-login_uri={`${process.env.JUNE_API_HOST}/auth/google_oauth2`}
-                    data-cancel_on_tap_outside="false"
-                  ></div>
-                </div>
-              </>
-            )}
+            <Button
+              className="g-conversion-button"
+              as="a"
+              size="landingMd"
+              variant="btnOnboard"
+              href="https://onboard.xyz"
+            >
+              Go to website
+            </Button>
           </HStack>
         </Flex>
       </Container>

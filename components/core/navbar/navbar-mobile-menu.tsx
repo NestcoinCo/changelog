@@ -22,8 +22,8 @@ export const NavbarMobileMenu = ({ toggle }: NavbarMobileMenuProps) => (
     >
       <Flex direction="column">
         <Flex align="center" justify="space-between">
-          <Flex p={4} as="a" href="https://onboard.xyz/">
-            <NextImage height={48} width={48} src="/june-logo-symbol-only.svg" alt="onboard-logo" />
+          <Flex p={4} as="a" href="https://changelog.onboard.xyz/">
+            <NextImage height={48} width={48} src="/onboard-logo.svg" alt="onboard-logo" />
           </Flex>
           <Flex p={4} onClick={toggle}>
             <Box pr={1}>
@@ -60,17 +60,17 @@ export const NavbarMobileMenu = ({ toggle }: NavbarMobileMenuProps) => (
             </Text>
           </Flex>
         </Link>
+        <Link prefetch={false} href="https://onboard.xyz/cards" passHref>
+          <Flex align="center" style={{ textDecoration: "none" }}>
+            <Text fontSize="4xl" fontWeight="bold" color={MOBILE_MENU_COLOR}>
+              Cards
+            </Text>
+          </Flex>
+        </Link>
         <Link prefetch={false} href="https://onboard.xyz/direct" passHref>
           <Flex align="center" style={{ textDecoration: "none" }}>
             <Text fontSize="4xl" fontWeight="bold" color={MOBILE_MENU_COLOR}>
               Direct
-            </Text>
-          </Flex>
-        </Link>
-        <Link prefetch={false} href="https://june.so/pricing" passHref>
-          <Flex align="center" style={{ textDecoration: "none" }} _hover={{ cursor: "pointer" }}>
-            <Text fontSize="4xl" fontWeight="bold" color={MOBILE_MENU_COLOR}>
-              Builders
             </Text>
           </Flex>
         </Link>
@@ -82,26 +82,16 @@ export const NavbarMobileMenu = ({ toggle }: NavbarMobileMenuProps) => (
       </Flex>
       <Stack spacing={4} mt={16}>
         <Button
-          h={50}
-          size="md"
-          as="a"
-          href={`${process.env.JUNE_APP_HOST}/log-in`}
-          borderRadius={6}
-          fontWeight={MOBILE_FONT_WEIGHT}
-        >
-          Log in
-        </Button>
-        <Button
           colorScheme="purple"
           size="md"
           h={50}
           as="a"
-          href={`${process.env.JUNE_APP_HOST}/start`}
+          href="https://onboard.xyz"
           borderRadius={6}
           fontWeight={MOBILE_FONT_WEIGHT}
           className="g-conversion-button"
         >
-          Get started
+          Go to website
         </Button>
       </Stack>
     </Flex>

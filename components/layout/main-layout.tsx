@@ -227,7 +227,7 @@ export const MainLayout = ({
       >
         <TryBanner _wrapper={{ my: [50, 50, 120] }} />
 
-        <Footer _wrapper={{ mt: [50, 50, 120], mb: 20 }} />
+        <Footer _wrapper={{ mt: [50, 50, 50], mb: 20 }} />
       </motion.div>
     </>
   );

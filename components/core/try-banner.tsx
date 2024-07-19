@@ -27,16 +27,11 @@ function TryJuneBanner(props: TryJuneBannerProps) {
     ),
     description = (
       <>
-        Just connect <Highlight>Segment</Highlight>, implement{" "}
-        <Highlight as="a" href="https://www.june.so/docs">
-          our SDK
-        </Highlight>{" "}
-        or use our <Highlight>other integrations</Highlight> to start understanding how your product
-        is used
+        Access onchain finance, a decentalized app store, and a support ecosystem to build useful apps onchain.
       </>
     ),
-    buttonText = "Get started for free",
-    buttonHref = "https://analytics.june.so/start",
+    buttonText = "Get Onboard",
+    buttonHref = "https://onboard.xyz",
     buttonHrefType = "external",
     mode = "light",
   } = props;
@@ -125,7 +120,7 @@ function TryJuneBanner(props: TryJuneBannerProps) {
             <Button
               as="a"
               size="landingMd"
-              variant={"landingGradient"}
+              variant={"btnOnboard"}
               rel="noreferrer noopener"
               className="g-conversion-button"
               w={["full", "full", "unset"]}

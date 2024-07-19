@@ -24,7 +24,7 @@ export function DesktopNavItem(props: DesktopNavItemProps) {
     <Wrapper>
       <Text
         {...desktopNavItemStyle}
-        color={props.isActive ? "purple.500" : staticColor}
+        color={props.isActive ? "onboardblue.500" : staticColor}
         as={props.type === "external-link" ? "a" : "div"}
         {...(props.type === "external-link" && {
           href: props.href,
@@ -43,6 +43,6 @@ export const desktopNavItemStyle: TextProps = {
   color: "purple.900",
   textAlign: "center",
   cursor: "pointer",
-  _hover: { color: "purple.500" },
-  _active: { color: "purple.600" },
+  _hover: { color: "onboardblue.500" },
+  _active: { color: "onboardblue.500" },
 };
