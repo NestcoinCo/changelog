@@ -46,13 +46,13 @@ const Timeline = (props: TimelineProps) => {
           {isOpen && <BackButton />}
 
           <Text fontSize="16px" color="#868E96" alignItems="start" width="125px">
-            <motion.div
+            <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
               {date}
-            </motion.div>
+            </motion.span>
           </Text>
         </VStack>
       )}
