@@ -44,9 +44,7 @@ const wordmarkSvg = `<svg width="313" height="100" viewBox="0 0 313 100" fill="n
 </svg>
 `;
 
-const ROUTES = [
-  { href: "/", title: "Changelog", type: "internal-link" },
-] as const;
+const ROUTES = [{ href: "/", title: "Changelog", type: "internal-link" }] as const;
 
 interface NavbarProps {
   activeHref?: typeof ROUTES[number]["href"] | "/" | "/feature-launches" | "/ai";
@@ -97,12 +95,7 @@ function Navbar(props: NavbarProps) {
           <Flex direction="column">
             <Flex align="center" justify="space-between">
               <Flex p={4} as="a" href="https://changelog.onboard.xyz/">
-                <NextImage
-                  height={48}
-                  width={48}
-                  src="/onboard-logo.svg"
-                  alt="onboard-logo"
-                />
+                <NextImage height={48} width={48} src="/onboard-logo.svg" alt="onboard-logo" />
               </Flex>
               <Flex p={4} onClick={onMobileMenuToggle}>
                 <Box>
